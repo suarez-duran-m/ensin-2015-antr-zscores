@@ -9,6 +9,7 @@
 # Explicitly allowed files
 !.gitignore
 !CLAUDE.md
+!README.md
 !scripts/
 !scripts/**
 

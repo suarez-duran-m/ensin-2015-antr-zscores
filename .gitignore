@@ -1,0 +1,17 @@
+# Deny-by-default: only code/docs explicitly allowed below are tracked.
+# This protects against accidentally committing ENSIN data files (.dta, .TXT,
+# .bak, .xlsx, .docx, .pdf, extracted .csv) even if new ones are added later.
+*
+
+# Allow traversal into directories so the rules below can match
+!*/
+
+# Explicitly allowed files
+!.gitignore
+!CLAUDE.md
+!scripts/
+!scripts/**
+
+# Re-ignore junk that can appear inside allowed directories
+scripts/__pycache__/
+scripts/*.pyc
